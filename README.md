@@ -17,7 +17,7 @@ Our project aims to identify which countries businesses should prioritize for ex
 ## Table of Contents
 1. xxx
 2. xxx
-3. [Reference](## Reference)
+3. [Reference](#reference)
 
 
 ## Reference
