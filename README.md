@@ -16,10 +16,19 @@ Our project aims to identify which countries businesses should prioritize for ex
 * Viktoriia Peleshko 
 
 ## Table of Contents
+
 1. xxx
 2. xxx
-3. [Reference](#reference)
+3. [Video Links](#video_links)
+4. [Reference](#reference)
 
+## Video Links
+
+* Carlos GD
+* Liya Paul
+* Nicole Yu
+* Viktoriia Peleshko 
 
 ## Reference
+
 [Data Folder](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/data)
