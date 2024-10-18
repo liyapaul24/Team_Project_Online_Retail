@@ -19,7 +19,7 @@ Our project aims to identify which countries businesses should prioritize for ex
 
 1. xxx
 2. xxx
-3. [Video Links](#video_links)
+3. [Video Links](#video-links)
 4. [Reference](#reference)
 
 ## Video Links
