@@ -41,6 +41,7 @@ WHERE InvoiceDate >= 'YYYY-01-01'
 GROUP BY Country
 ORDER BY TotalRevenue DESC
 LIMIT 1;
+```
 
 #### Data Analysis
 
