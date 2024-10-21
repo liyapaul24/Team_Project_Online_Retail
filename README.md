@@ -27,6 +27,41 @@ The project aims to gain insights into the factors affecting global retail sales
 
 ## What country has highest revenue in the last years? - Carlos & Nicole
 
+### Methodology
+
+#### Data Extraction
+We extracted total revenue by country using the following SQL query:
+
+```sql
+SELECT 
+    Country, 
+    SUM(Quantity * UnitPrice) AS TotalRevenue
+FROM sales_data
+WHERE InvoiceDate >= 'YYYY-01-01'
+GROUP BY Country
+ORDER BY TotalRevenue DESC
+LIMIT 1;
+
+#### Data Analysis
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load revenue data into a DataFrame
+df_revenue = pd.read_sql(sql_query, engine)
+
+# Plotting total revenue by country
+plt.figure(figsize=(10, 6))
+plt.bar(df_revenue['Country'], df_revenue['TotalRevenue'], color='blue')
+plt.xticks(rotation=45)
+plt.xlabel('Country')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Country')
+plt.show()
+
+
+
+
 ## How many unique customers per country in the last years? - Viktoriia & Liya
 
 ## Video Links
