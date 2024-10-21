@@ -25,6 +25,10 @@ The project aims to gain insights into the factors affecting global retail sales
 4. [Video Links](#video-links)
 5. [Reference](#reference)
 
+## What country has highest revenue in the last years? - Carlos & Nicole
+
+## How many unique customers per country in the last years? - Viktoriia & Liya
+
 ## Video Links
 
 * Carlos GD
