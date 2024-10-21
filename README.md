@@ -44,7 +44,9 @@ LIMIT 1;
 ```
 
 #### Data Analysis
+We analyzed the data using Python and visualized the results:
 
+```python
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -59,7 +61,7 @@ plt.xlabel('Country')
 plt.ylabel('Total Revenue')
 plt.title('Total Revenue by Country')
 plt.show()
-
+```
 
 
 
