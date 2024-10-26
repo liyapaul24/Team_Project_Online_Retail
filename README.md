@@ -40,6 +40,8 @@ The team is working with a substantial dataset that required splitting into two 
 
 ## Data Cleaning
 
+### Revenue
+
 1. We extracted total revenue by country using the following SQL query
 
 ```sql
@@ -53,9 +55,13 @@ ORDER BY TotalRevenue DESC
 LIMIT 1;
 ```
 
-2. We extracted ...
+### Customers
+
+1. We extracted ...
 
 ## Data Analysis
+
+### Revenue
 
 1. We analyzed the data using Python and visualized the results
 
@@ -76,9 +82,14 @@ plt.title('Total Revenue by Country')
 plt.show()
 ```
 
-2. We analyzed ...
+### Customers
+
+1. We analyzed ...
 
 ## Data Merging
+
+
+
 
 ## Summary of Findings
 
