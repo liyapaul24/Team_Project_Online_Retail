@@ -40,7 +40,7 @@ The team is working with a substantial dataset that required splitting into two 
 
 ## Data Cleaning
 
-### Revenue
+### Revenue Metric
 
 1. We extracted total revenue by country using the following SQL query
 
@@ -55,13 +55,13 @@ ORDER BY TotalRevenue DESC
 LIMIT 1;
 ```
 
-### Customers
+### Customer Metric
 
 1. We extracted ...
 
 ## Data Analysis
 
-### Revenue
+### Revenue Metric
 
 1. We analyzed the data using Python and visualized the results
 
@@ -82,7 +82,7 @@ plt.title('Total Revenue by Country')
 plt.show()
 ```
 
-### Customers
+### Customer Metric
 
 1. We analyzed ...
 
