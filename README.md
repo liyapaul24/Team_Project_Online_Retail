@@ -14,23 +14,33 @@ The project aims to gain insights into the factors affecting global retail sales
 
 * Carlos GD
 * Liya Paul
-* Nicole Yu [nicolexyu](https://github.com/nicolexyu)
+* Nicole Yu [nicolexyu](x)
 * Viktoriia Peleshko 
 
 ## Table of Contents
 
-1. xxx
-2. What country has highest revenue in the last years? - Carlos & Nicole
-3. How many unique customers per country in the last years? - Viktoriia & Liya
-4. [Video Links](#video-links)
-5. [Reference](#reference)
+1. Introduction
+2. Data Collection
+3. Data Cleaning
+4. Data Merging
+5. Summary of Findings - What country has highest revenue in the last years? - Carlos & Nicole
+7. Summary of Findings - How many unique customers per country in the last years? - Viktoriia & Liya
+8. [Video Links](#video-links)
+9. [Reference](#reference)
 
-## What country has highest revenue in the last years? - Carlos & Nicole
+## Introduction
 
-### Methodology
+The Team Project aims to enhance your ability to deliver business value in a practical setting. This project should be included in your portfolio, and you should feel confident presenting it to prospective employers as a showcase of your skills.
 
-#### Data Extraction
-We extracted total revenue by country using the following SQL query:
+The Team Project is divided into two modules, each requiring participants to utilize the skills you've acquired thus far. The first module focuses on analyzing a dataset and developing a basic program for this purpose. In the second module, teams will reconvene to implement the skills gained from the data science or machine learning foundations certificate streams. Teams will either produce a data visualization or develop a machine learning model.
+
+## Data Collection
+
+The team is working with a substantial dataset that required splitting into two separate files due to its size, covering data from two consecutive years. This dataset includes key variables such as Invoice, StockCode, Description, Quantity, InvoiceDate, Price, Customer ID, and Country. By leveraging this comprehensive information, the team aims to conduct an in-depth analysis to uncover valuable insights and trends over the specified time period.
+
+## Data Cleaning
+
+1. We extracted total revenue by country using the following SQL query
 
 ```sql
 SELECT 
@@ -43,8 +53,11 @@ ORDER BY TotalRevenue DESC
 LIMIT 1;
 ```
 
-#### Data Analysis
-We analyzed the data using Python and visualized the results:
+2. We extracted ...
+
+## Data Analysis
+
+1. We analyzed the data using Python and visualized the results
 
 ```python
 import pandas as pd
@@ -63,9 +76,15 @@ plt.title('Total Revenue by Country')
 plt.show()
 ```
 
+2. We analyzed ...
 
+## Data Merging
 
-## How many unique customers per country in the last years? - Viktoriia & Liya
+## Summary of Findings
+
+### What country has highest revenue in the last years? - Carlos & Nicole
+
+### How many unique customers per country in the last years? - Viktoriia & Liya
 
 ## Video Links
 
