@@ -22,8 +22,8 @@ The project aims to gain insights into the factors affecting global retail sales
 1. [Introduction](#Introduction)
 2. [Data Preparation](#Data-Preparation)
 3. [Data Analysis](#Data-Analysis)
-4. [What country has highest revenue in the last years? - Carlos & Nicole](#what-country-has-highest-revenue-in-the-last-years---carlos-and-nicole)
-5. [How many unique customers per country in the last years? - Viktoriia & Liya](#how-many-unique-customers-per-country-in-the-last-years---viktoriia-and-liya)
+4. [Summary of Findings: What country has highest revenue in the last years? - Carlos & Nicole](#Findings-Revenue-Metric)
+5. [Summary of Findings: How many unique customers per country in the last years? - Viktoriia & Liya](#Findings-Revenue-Metric)
 7. [Video Links](#video-links)
 8. [Reference](#reference)
 
@@ -87,6 +87,7 @@ plt.show()
 
 ## Summary of Findings
 
+### Findings Revenue Metric
 ### What country has highest revenue in the last years? - Carlos & Nicole
 
 We generated the results for the top 10 countries by total revenue for all three years, and for each individual year based on the raw data.
@@ -175,7 +176,7 @@ This gives us a clearer picture of the data's structure and prepares us for bett
 
 This intersection point illustrates the divergence in growth dynamics between a mature market (UK) and an emerging, high-growth market (Nigeria), guiding strategic decisions based on these contrasting trends.
 
-
+### Findings Customer Metric
 ### How many unique customers per country in the last years? - Viktoriia & Liya
 
 ## Video Links
