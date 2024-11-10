@@ -23,7 +23,7 @@ The project aims to gain insights into the factors affecting global retail sales
 2. [Data Preparation](#Data-Preparation)
 3. [Data Analysis](#Data-Analysis)
 4. [Summary of Findings: What country has highest revenue in the last years? - Carlos & Nicole](#Findings-Revenue-Metric)
-5. [Summary of Findings: How many unique customers per country in the last years? - Viktoriia & Liya](#Findings-Revenue-Metric)
+5. [Summary of Findings: How many unique customers per country in the last years? - Viktoriia & Liya](#Findings-Customer-Metric)
 7. [Video Links](#video-links)
 8. [Reference](#reference)
 
