@@ -21,8 +21,8 @@ The project aims to gain insights into the factors affecting global retail sales
 
 1. Introduction
 2. Data Collection
-3. Data Cleaning
-4. Data Merging
+3. Data Preparation
+4. Data Analysis
 5. Summary of Findings - What country has highest revenue in the last years? - Carlos & Nicole
 7. Summary of Findings - How many unique customers per country in the last years? - Viktoriia & Liya
 8. [Video Links](#video-links)
@@ -38,7 +38,7 @@ The Team Project is divided into two modules, each requiring participants to uti
 
 The team is working with a substantial dataset that required splitting into two separate files due to its size, covering data from two consecutive years. This dataset includes key variables such as Invoice, StockCode, Description, Quantity, InvoiceDate, Price, Customer ID, and Country. By leveraging this comprehensive information, the team aims to conduct an in-depth analysis to uncover valuable insights and trends over the specified time period.
 
-## Data Cleaning
+## Data Preparation
 
 ### Revenue Metric
 
@@ -85,11 +85,6 @@ plt.show()
 ### Customer Metric
 
 1. We analyzed ...
-
-## Data Merging
-
-
-
 
 ## Summary of Findings
 
