@@ -130,7 +130,7 @@ By analyzing the top 10 countries by revenue both across all years and for each 
 
 #### Top 10 Countries with the Highest Revenue Trend (regression model):
 
-![Screenshot 2024-11-10 151921](https://github.com/user-attachments/assets/ef385fa9-d8c4-48ce-a318-2fbfc12affdd)
+![Screenshot 2024-11-10 151921](https://github.com/user-attachments/assets/fba90e6a-5c65-4f57-b310-75b079ecd3ca)
 
 Countries with a higher coefficient (like Nigeria and Australia) are seeing a more significant increase in their revenue trend. This suggests that these countries are experiencing rapid growth in revenue, and any further investment or strategy in these regions may yield higher returns.
 
