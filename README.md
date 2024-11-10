@@ -14,16 +14,16 @@ The project aims to gain insights into the factors affecting global retail sales
 
 * Carlos GD []()
 * Liya Paul [liyapaul24](https://github.com/liyapaul24/Team_Project_Online_Retail)
-* Nicole Yu [nicolexyu]([x](https://github.com/nicolexyu/Team_Project_Online_Retail))
+* Nicole Yu [nicolexyu](https://github.com/nicolexyu/Team_Project_Online_Retail)
 * Viktoriia Peleshko []()
 
 ## Table of Contents
 
-1. [Introduction](##Introduction)
-2. [Data Preparation](##Data-Preparation)
-3. [Data Analysis](##Data-Analysis)
-4. [Summary of Findings - What country has highest revenue in the last years? - Carlos & Nicole](###What-country-has-highest-revenue-in-the-last-years?---Carlos-&-Nicole)
-5. [Summary of Findings - How many unique customers per country in the last years? - Viktoriia & Liya](###How-many-unique-customers-per-country-in-the-last-years?---Viktoriia-&-Liya)
+1. [Introduction](#Introduction)
+2. [Data Preparation](#Data-Preparation)
+3. [Data Analysis](#Data-Analysis)
+4. [Summary of Findings - What country has highest revenue in the last years? - Carlos & Nicole](#What-country-has-highest-revenue-in-the-last-years?---Carlos-&-Nicole)
+5. [Summary of Findings - How many unique customers per country in the last years? - Viktoriia & Liya](#How-many-unique-customers-per-country-in-the-last-years?---Viktoriia-&-Liya)
 6. [Video Links](#video-links)
 7. [Reference](#reference)
 
@@ -41,7 +41,7 @@ We used SQL to combine data: Two CSV files (online_retail_2009_2010 and online_r
 
 ### Revenue Metric
 
-We used SQL to clean the data":
+We used SQL to clean the data:
 1. Identify Duplicates: This is done by grouping all columns and counting occurrences, returning rows where the count is greater than 1 (duplicates).
 2. Create a Table with Unique Records: This step removes duplicates while retaining only unique records.
 3. Identify Missing Values: The query counts how many missing values exist in each column.  
