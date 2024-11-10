@@ -22,10 +22,10 @@ The project aims to gain insights into the factors affecting global retail sales
 1. [Introduction](#Introduction)
 2. [Data Preparation](#Data-Preparation)
 3. [Data Analysis](#Data-Analysis)
-4. [Summary of Findings - What country has highest revenue in the last years? - Carlos & Nicole](#what-country-has-highest-revenue-in-the-last-years---carlos-and-nicole)
-5. [Summary of Findings - How many unique customers per country in the last years? - Viktoriia & Liya](#How-many-unique-customers-per-country-in-the-last-years---Viktoriia-and-Liya)
-6. [Video Links](#video-links)
-7. [Reference](#reference)
+4. [What country has highest revenue in the last years? - Carlos & Nicole](#what-country-has-highest-revenue-in-the-last-years---carlos-and-nicole)
+5. [How many unique customers per country in the last years? - Viktoriia & Liya](#how-many-unique-customers-per-country-in-the-last-years---viktoriia-and-liya)
+7. [Video Links](#video-links)
+8. [Reference](#reference)
 
 ## Introduction
 
@@ -129,7 +129,7 @@ By analyzing the top 10 countries by revenue both across all years and for each 
 
 #### Top 10 Countries with the Highest Revenue Trend (regression model):
 
-![Screenshot 2024-11-10 151921](https://github.com/user-attachments/assets/41f0e714-df9f-42e3-b4c9-76787464afa8)
+![Screenshot 2024-11-10 151921](https://github.com/user-attachments/assets/ef385fa9-d8c4-48ce-a318-2fbfc12affdd)
 
 Countries with a higher coefficient (like Nigeria and Australia) are seeing a more significant increase in their revenue trend. This suggests that these countries are experiencing rapid growth in revenue, and any further investment or strategy in these regions may yield higher returns.
 
