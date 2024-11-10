@@ -22,8 +22,8 @@ The project aims to gain insights into the factors affecting global retail sales
 1. [Introduction](#Introduction)
 2. [Data Preparation](#Data-Preparation)
 3. [Data Analysis](#Data-Analysis)
-4. [Summary of Findings - What country has highest revenue in the last years? - Carlos & Nicole](#What-country-has-highest-revenue-in-the-last-years?---Carlos-&-Nicole)
-5. [Summary of Findings - How many unique customers per country in the last years? - Viktoriia & Liya](#How-many-unique-customers-per-country-in-the-last-years?---Viktoriia-&-Liya)
+4. [Summary of Findings - What country has highest revenue in the last years? - Carlos & Nicole](#what-country-has-highest-revenue-in-the-last-years-carlos-nicole)
+5. [Summary of Findings - How many unique customers per country in the last years? - Viktoriia & Liya](#How-many-unique-customers-per-country-in-the-last-years-Viktoriia-&-Liya)
 6. [Video Links](#video-links)
 7. [Reference](#reference)
 
@@ -96,7 +96,9 @@ We generated the results for the top 10 countries by total revenue for all three
 ![all years](https://github.com/user-attachments/assets/52b90699-9c20-4612-a554-fe362b09136a)
 
 • United Kingdom leads by a significant margin with almost 16 million in total revenue. This could indicate that the UK is the most important market for the business during this period.
+
 • EIRE (Ireland) and Netherlands are second and third, but their revenue is much lower, indicating a different market structure where the UK is dominant.
+
 • Countries like Germany, France, and Australia show lower revenues, but still contribute significantly to the overall dataset.
 
 #### Top 10 Countries by Revenue for Each Year:
