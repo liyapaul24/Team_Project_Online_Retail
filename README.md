@@ -132,7 +132,7 @@ By analyzing the top 10 countries by revenue both across all years and for each 
 
 Countries with a higher coefficient (like Nigeria and Australia) are seeing a more significant increase in their revenue trend. This suggests that these countries are experiencing rapid growth in revenue, and any further investment or strategy in these regions may yield higher returns.
 
-= Nigeria has the highest coefficient (78.34), meaning that for every unit increase in the predictor, the revenue trend increases significantly. 
+- Nigeria has the highest coefficient (78.34), meaning that for every unit increase in the predictor, the revenue trend increases significantly. 
 - Australia follows closely with a coefficient of 62.95, suggesting that Australia's revenue trend is also growing at a strong rate, though not as quickly as Nigeria's.
 
 Based on the results, businesses or analysts might prioritize countries with higher coefficients for expansion, marketing, or resource allocation, as they are seeing a stronger revenue trend.
