@@ -107,18 +107,18 @@ We generated the results for the top 10 countries by total revenue for all three
 ![each year](https://github.com/user-attachments/assets/ab5accd9-26d1-489d-81d6-9d7cdd9e6f07)
 
 For 2009:
-• The United Kingdom remains the leader in 2009 with a significant share of revenue.
-• The revenue for other countries like Germany, France, and Spain is notably lower in 2009 compared to later years, which could indicate growth in these markets in the subsequent years.
+- The United Kingdom remains the leader in 2009 with a significant share of revenue.
+- The revenue for other countries like Germany, France, and Spain is notably lower in 2009 compared to later years, which could indicate growth in these markets in the subsequent years.
 
 For 2010:
-• The United Kingdom continues to dominate in 2010 with a massive revenue spike compared to 2009.
-• EIRE, Netherlands, and Germany show noticeable increases in revenue in 2010.
-• Countries like France and Sweden also show growth, albeit not as high as the UK.
+- The United Kingdom continues to dominate in 2010 with a massive revenue spike compared to 2009.
+- EIRE, Netherlands, and Germany show noticeable increases in revenue in 2010.
+- Countries like France and Sweden also show growth, albeit not as high as the UK.
 
 For 2011:
-• The United Kingdom remains the top revenue-generating country in 2011, but its revenue decreased slightly compared to 2010.
-• EIRE and Netherlands remain strong, though slightly lower than in 2010.
-• Germany and France maintain consistent contributions, while countries like Belgium and Sweden show improvement.
+- The United Kingdom remains the top revenue-generating country in 2011, but its revenue decreased slightly compared to 2010.
+- EIRE and Netherlands remain strong, though slightly lower than in 2010.
+- Germany and France maintain consistent contributions, while countries like Belgium and Sweden show improvement.
 
 Summary: 
 The United Kingdom shows strong dominance in all three years, suggesting it is a stable market. However, the decline from 2010 to 2011 could indicate market saturation or other external factors. Observing this trend helps us understand how the performance of different countries changes over time. 
