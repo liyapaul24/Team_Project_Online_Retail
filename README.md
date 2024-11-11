@@ -51,7 +51,7 @@ The results indicate that the dataset is mostly complete, with no missing values
 
 Since the Customer ID and Description columns are not involved in the revenue calculation, the missing data in those columns won't impact the results of the revenue analysis. However, this could be an area of focus for further data cleaning or investigation, especially for the large number of missing customer IDs.
 
-[Link to the folder for SQL code](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/src/Revenue%20Metric)
+[File for SQL code](https://github.com/nicolexyu/Team_Project_Online_Retail/blob/main/src/Revenue%20Metric/revenue_sql_code.sql)
 
 ### Customer Metric
 
@@ -61,28 +61,116 @@ Since the Customer ID and Description columns are not involved in the revenue ca
 
 ### Revenue Metric
 
-1. We analyzed the data using Python and visualized the results
+We analyzed the data using Python and visualized the results.
+
+Top 10 Countries by Total Revenue for All Years:
 
 ```python
-import pandas as pd
-import matplotlib.pyplot as plt
+# Calculate total revenue per country for all years
+data['TotalRevenue'] = data['Quantity'] * data['Price']
+country_revenue = data.groupby('Country')['TotalRevenue'].sum().reset_index()
 
-# Load revenue data into a DataFrame
-df_revenue = pd.read_sql(sql_query, engine)
-
-# Plotting total revenue by country
-plt.figure(figsize=(10, 6))
-plt.bar(df_revenue['Country'], df_revenue['TotalRevenue'], color='blue')
-plt.xticks(rotation=45)
-plt.xlabel('Country')
-plt.ylabel('Total Revenue')
-plt.title('Total Revenue by Country')
-plt.show()
+# Sort the countries by revenue in descending order
+country_revenue = country_revenue.sort_values(by='TotalRevenue', ascending=False)
 ```
+
+Top 10 Countries by Revenue for Each Year:
+
+```python
+# Extract the year from InvoiceDate: extracts the year from the InvoiceDate and creates a new column for it.
+data['Year'] = data['InvoiceDate'].dt.year
+
+# Group by 'Year' and 'Country' to calculate total revenue per country per year
+yearly_revenue = data.groupby(['Year', 'Country'])['TotalRevenue'].sum().reset_index()
+
+# Sort the results by year and then by total revenue: The results are sorted first by Year and then by TotalRevenue within each year in descending order.
+yearly_revenue = yearly_revenue.sort_values(by=['Year', 'TotalRevenue'], ascending=[True, False])
+
+# Function to get top 10 countries per year
+def get_top_countries_per_year(df, top_n=10):
+    top_countries_per_year = df.groupby('Year').head(top_n)
+    return top_countries_per_year
+
+# Get the top 10 countries for each year
+top_10_countries_per_year = get_top_countries_per_year(yearly_revenue, top_n=10)
+```
+
+Top 10 Countries with the Highest Revenue Trend (regression model):
+
+```python
+# Initialize dictionary to store the results
+country_trends = {}
+
+# Group by country and fit a linear regression model for each
+for country, group in data.groupby('Country'):
+    # Prepare the features and target variable
+    X = group['Year'].values.reshape(-1, 1)  # Year as feature
+    y = group['TotalRevenue'].values  # Total revenue as target
+
+    # Split the data into training and testing sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    # Initialize and fit the linear regression model on the training data
+    model = LinearRegression()
+    model.fit(X_train, y_train)
+    
+    # Predict the revenue trend on both training and test data
+    y_train_pred = model.predict(X_train)
+    y_test_pred = model.predict(X_test)
+    
+    # Store the model parameters and prediction results
+    country_trends[country] = {
+        'intercept': model.intercept_,
+        'coefficient': model.coef_[0],
+        'years': group['Year'],
+        'total_revenue': group['TotalRevenue'],
+        'trend_line': model.predict(X.reshape(-1, 1)),  # Full trend line
+        'train_pred': y_train_pred,
+        'test_pred': y_test_pred,
+        'train_true': y_train,
+        'test_true': y_test
+    }
+
+# Convert the results to a DataFrame for easier analysis
+trends_df = pd.DataFrame.from_dict(country_trends, orient='index')
+
+# Sort the DataFrame by 'Coefficient' in descending order to find the top 10 countries
+top_countries = trends_df.sort_values(by='coefficient', ascending=False).head(10)
+```
+
+Intersection of the United Kingdom (UK) and Nigeria in the regression model
+
+```python
+# Find the intersection of the two regression lines
+
+# The equation of the regression lines is:
+# y_uk = intercept_uk + coefficient_uk * x
+# y_nigeria = intercept_nigeria + coefficient_nigeria * x
+
+# Extract the coefficients and intercepts
+intercept_uk, coef_uk = country_trends['United Kingdom']['intercept'], country_trends['United Kingdom']['coefficient']
+intercept_nigeria, coef_nigeria = country_trends['Nigeria']['intercept'], country_trends['Nigeria']['coefficient']
+
+# Solve for the intersection point (x)
+# intercept_uk + coef_uk * x = intercept_nigeria + coef_nigeria * x
+# x = (intercept_nigeria - intercept_uk) / (coef_uk - coef_nigeria)
+
+# Ensure the lines are not parallel (i.e., coefficients are different)
+if coef_uk != coef_nigeria:
+    # Calculate the x-coordinate of the intersection point
+    intersection_x = (intercept_nigeria - intercept_uk) / (coef_uk - coef_nigeria)
+    
+    # Calculate the y-coordinate by substituting the x value into one of the linear equations (use the UK model)
+    intersection_y = intercept_uk + coef_uk * intersection_x
+    
+    print(f"The intersection point of the UK and Nigeria trend lines is at: x = {intersection_x:.2f}, y = {intersection_y:.2f}")
+```
+
+[File for Python code](https://github.com/nicolexyu/Team_Project_Online_Retail/blob/main/src/Revenue%20Metric/revenue_python_code.ipynb)
 
 ### Customer Metric
 
-1. We analyzed ...
+We analyzed ...
 
 
 ## Summary of Findings
