@@ -150,15 +150,13 @@ Nigeria is identified as the top country in terms of revenue trend based on the 
 
 Why the Discrepancy?
 
-Total Revenue vs. Growth: The raw data highlights total revenue over all years, which can be influenced by long-standing, well-established markets like the UK, where the base revenue may already be large. On the other hand, the regression model evaluates growth over time, giving more weight to countries like Nigeria that may have smaller total revenues but are experiencing significant growth in recent years.
-
-Emerging Markets: Countries like Nigeria may be in a period of rapid economic or business growth, causing their revenue trend to spike even though their total revenue is not the highest. In contrast, countries like the UK may have reached a plateau or slower growth, thus not appearing as high in the regression results even though they have historically had large revenue totals.
+- Total Revenue vs. Growth: The raw data highlights total revenue over all years, which can be influenced by long-standing, well-established markets like the UK, where the base revenue may already be large. On the other hand, the regression model evaluates growth over time, giving more weight to countries like Nigeria that may have smaller total revenues but are experiencing significant growth in recent years.
+- Emerging Markets: Countries like Nigeria may be in a period of rapid economic or business growth, causing their revenue trend to spike even though their total revenue is not the highest. In contrast, countries like the UK may have reached a plateau or slower growth, thus not appearing as high in the regression results even though they have historically had large revenue totals.
 
 Implications for Business Strategy:
 
-For the Raw Data (UK): The UK remains a key market with the highest total revenue, so continuing business in this region is likely crucial for sustaining overall sales performance.
-
-For the Regression Model (Nigeria): The strong growth trend in Nigeria indicates potential for future expansion or investment. If your goal is to target countries with the highest growth potential, Nigeria would be a key area for strategic focus, as it is showing the highest increase in revenue, which could lead to larger market share over time.
+- For the Raw Data (UK): The UK remains a key market with the highest total revenue, so continuing business in this region is likely crucial for sustaining overall sales performance.
+- For the Regression Model (Nigeria): The strong growth trend in Nigeria indicates potential for future expansion or investment. If your goal is to target countries with the highest growth potential, Nigeria would be a key area for strategic focus, as it is showing the highest increase in revenue, which could lead to larger market share over time.
 
 #### Intersection of the United Kingdom (UK) and Nigeria in the regression model
 
