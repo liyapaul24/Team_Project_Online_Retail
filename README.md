@@ -96,11 +96,9 @@ We generated the results for the top 10 countries by total revenue for all three
 
 ![all years](https://github.com/user-attachments/assets/52b90699-9c20-4612-a554-fe362b09136a)
 
-• United Kingdom leads by a significant margin with almost 16 million in total revenue. This could indicate that the UK is the most important market for the business during this period.
-
-• EIRE (Ireland) and Netherlands are second and third, but their revenue is much lower, indicating a different market structure where the UK is dominant.
-
-• Countries like Germany, France, and Australia show lower revenues, but still contribute significantly to the overall dataset.
+- United Kingdom leads by a significant margin with almost 16 million in total revenue. This could indicate that the UK is the most important market for the business during this period.
+- EIRE (Ireland) and Netherlands are second and third, but their revenue is much lower, indicating a different market structure where the UK is dominant.
+- Countries like Germany, France, and Australia show lower revenues, but still contribute significantly to the overall dataset.
 
 #### Top 10 Countries by Revenue for Each Year:
 
@@ -134,19 +132,18 @@ By analyzing the top 10 countries by revenue both across all years and for each 
 
 Countries with a higher coefficient (like Nigeria and Australia) are seeing a more significant increase in their revenue trend. This suggests that these countries are experiencing rapid growth in revenue, and any further investment or strategy in these regions may yield higher returns.
 
-Nigeria has the highest coefficient (78.34), meaning that for every unit increase in the predictor, the revenue trend increases significantly. 
-
-Australia follows closely with a coefficient of 62.95, suggesting that Australia's revenue trend is also growing at a strong rate, though not as quickly as Nigeria's.
+= Nigeria has the highest coefficient (78.34), meaning that for every unit increase in the predictor, the revenue trend increases significantly. 
+- Australia follows closely with a coefficient of 62.95, suggesting that Australia's revenue trend is also growing at a strong rate, though not as quickly as Nigeria's.
 
 Based on the results, businesses or analysts might prioritize countries with higher coefficients for expansion, marketing, or resource allocation, as they are seeing a stronger revenue trend.
 
 #### Raw Data vs Regression Model
 
 Raw Data (Top Country for All Years and Each Year):
-United Kingdom (UK) is the top country in terms of total revenue for all years, as well as for each individual year, based on the raw data. This suggests that, historically, the UK has consistently generated the highest revenue across all years.
+- United Kingdom (UK) is the top country in terms of total revenue for all years, as well as for each individual year, based on the raw data. This suggests that, historically, the UK has consistently generated the highest revenue across all years.
 
 Regression Model (Top Country for Revenues):
-Nigeria is identified as the top country in terms of revenue trend based on the regression model. This means that, according to the model, Nigeria exhibits the highest growth or upward revenue trend among all countries.
+- Nigeria is identified as the top country in terms of revenue trend based on the regression model. This means that, according to the model, Nigeria exhibits the highest growth or upward revenue trend among all countries.
 
 Why the Discrepancy?
 
