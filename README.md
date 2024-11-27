@@ -12,7 +12,7 @@ The project aims to gain insights into the factors affecting global retail sales
 
 ## Team Members
 
-* Carlos GD []()
+* Carlos Gonzalez-Dao []()
 * Liya Paul [liyapaul24](https://github.com/liyapaul24/Team_Project_Online_Retail)
 * Nicole Yu [nicolexyu](https://github.com/nicolexyu/Team_Project_Online_Retail)
 * Viktoriia Peleshko []()
@@ -264,7 +264,7 @@ This intersection point illustrates the divergence in growth dynamics between a 
 
 ## Video Links
 
-* Carlos GD
+* Carlos Gonzalez-Dao
 * Liya Paul
 * Nicole Yu
 * Viktoriia Peleshko 
