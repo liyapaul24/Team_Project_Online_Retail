@@ -395,7 +395,7 @@ This intersection point illustrates the divergence in growth dynamics between a 
 
 During 2009 - 2011 the Company significantly developed the business. The total number of Customers increased by 4 times.
 
-![All_Customers](Total_output.png)
+![All_Customers](https://github.com/PeleshkoV/Team_Project_Online_Retail/blob/ab35a2b07a426fdbda9172791d760dba661746a5/src/Customer%20Metric/Total_output.png)
 
 2009: The base for growth  
 The number of customers was at its lowest level during the analyzed period, reaching only 1045 clients. This may indicate the initial stage of business development or other factors that affected the low customer base in that year.
@@ -413,7 +413,7 @@ Next, explore what Countries had the largest Customer base and made the biggest 
 The Company is present in 39 countries worldwide.
 The analysis shows the widest markets for all 3 years were the UK, Germany, France, and Spain. 
 
-![Top_Customers](Top_10_years.png)
+![Top_Customers](https://github.com/PeleshkoV/Team_Project_Online_Retail/blob/ab35a2b07a426fdbda9172791d760dba661746a5/src/Customer%20Metric/Top_10_years.png)
 
 In 2009-2011, the United Kingdom had an overwhelmingly larger number of customers compared to other countries. This is a native, well-known market for the Company.   
 Germany, France, and Spain appear in the Top 10 across all years but with much lower customer counts compared to the UK. The number of clients for these countries remains under 100 each year.  
@@ -425,11 +425,11 @@ Outside of the Top 10, there are some non-European countries with a small number
 
 The analysis of Absolute Growth confirms the trend: the strategy of the Company in 2009-2011 was rapid expansion in the UK market and slight development in some other European countries. 
 
-![Dominant UK](UK_Total.png)
+![Dominant UK](https://github.com/PeleshkoV/Team_Project_Online_Retail/blob/ab35a2b07a426fdbda9172791d760dba661746a5/src/Customer%20Metric/UK_Total.png)
 
 Absolute Growth leader - United Kingdom. The number of UK clients increased by 2849 names in 2011 compared with 2009 – 4 times! In 2009, UK clients accounted for 94.4% of the whole company's customer base. It declined to 92% in 2010 and 90.3% in 2011. The main reason for this slight decrease is the expansion into other European countries.
 
-![Absolure Growth](Growth_rate.png)
+![Absolure Growth](https://github.com/PeleshkoV/Team_Project_Online_Retail/blob/ab35a2b07a426fdbda9172791d760dba661746a5/src/Customer%20Metric/Growth_rate.png)
 
 The client’s bases significantly increased in Germany (+82 customers) and in France (+71) but their sizes remain small. 
 3 more countries added 20+ customers for the observation period: Spain, Belgium, and  Switzerland.
@@ -449,14 +449,14 @@ This analysis is based on three key factors:
 
 These new features were calculated and distributed. We received detailed information with useful insights about each of Customers. 
 
-![Customer_range](RFM_Customers.png)
+![Customer_range](https://github.com/PeleshkoV/Team_Project_Online_Retail/blob/ab35a2b07a426fdbda9172791d760dba661746a5/src/Customer%20Metric/RFM_Customers.png)
 
 Why is it important? 
 RFM analysis can help businesses focus on retaining and growing relationships with customers who contribute the most to their profitability.
 
 Based on the data we received, were created Linear Regression for the prediction of the most valuable customers in upcoming years to increase efficiency.
 
-![Valuable_Customers](<Valuable Customers.png>)
+![Valuable_Customers](https://github.com/PeleshkoV/Team_Project_Online_Retail/blob/ab35a2b07a426fdbda9172791d760dba661746a5/src/Customer%20Metric/Valuable%20Customers.png)
 
 These customers may spend more amount in the future, hence considering them as the most valuable clients. All of them are located in the UK which underlines the importance of this market for the Сompany. 
 
