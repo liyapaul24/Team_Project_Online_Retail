@@ -15,7 +15,7 @@ The project aims to gain insights into the factors affecting global retail sales
 * Carlos Gonzalez-Dao []()
 * Liya Paul [liyapaul24](https://github.com/liyapaul24/Team_Project_Online_Retail)
 * Nicole Yu [nicolexyu](https://github.com/nicolexyu/Team_Project_Online_Retail)
-* Viktoriia Peleshko []()
+* Viktoriia Peleshko [PeleshkoV](https://github.com/PeleshkoV/Team_Project_Online_Retail)
 
 ## Table of Contents
 
@@ -55,7 +55,21 @@ Since the Customer ID and Description columns are not involved in the revenue ca
 
 ### Customer Metric
 
-1. We extracted ...
+For analysis, we used a combined CSV file with information about online retail in 2009-2011.  
+
+All manipulation with data we have done in a Python environment.
+
+Overview:   The original dataset contains 1067371 rows without null values.   
+We have identified the following problems:  
+- 243007 rows (22,8%) with missing Customer ID data - significant number!  
+Customer ID is the critical field of our second research but rows with such missing data will not be useful for analysis.   
+- 4382 rows (0,41%) do not have Descriptions (these are the same rows without Customer IDs).   
+- 26479 duplicated rows;  
+- irrelevant names of Countries: 'Unspecified‘ – 521 rows, "European Community“ – 61 rows.   
+
+For accurate analysis, we have deleted the missing values and duplicates using 'dropna' function. Also, we removed rows with irrelevant data using loc- function.  
+Cleaning these rows avoids potential misinterpretations or mislinking of data.   
+The final Dataset contains 797303 rows.
 
 ## Data Analysis
 
@@ -170,8 +184,125 @@ if coef_uk != coef_nigeria:
 
 ### Customer Metric
 
-We analyzed ...
+We divided our research into two parts.   
+Part 1 - Determined Customer Uniqueness Across Countries.  
+Part 2 - Predict the most valuable customers in upcoming years to increase efficiency.
 
+#### Part 1
+1. Define the unique Customers in each country's market.
+
+```python
+# Group the unique Customers by Country per year:
+group_df = (df.groupby(["Country", "Year"])["Customer ID"]
+        .nunique()  
+        .reset_index(name="Total_Customers"))  
+
+# Structurize the data frame by creating the pivot table 
+group_pivot = group_df.pivot(index="Country", columns="Year", values="Total_Customers")
+
+# Calculate the Total amount of the unique company's Customers each year and add values to the pivot table.
+    total_customers = group_pivot.sum()
+    group_pivot.loc['Total'] = total_customers
+```
+
+2. Find Top 10 Countries by the number of unique Customers each year.
+
+```python 
+# Visualize the Top 10 based on the pivot table through the subplot function.
+def plot_top_10(group_pivot, year, ax):
+    year_data = group_pivot[year] 
+    top_10 = year_data.nlargest(10)
+
+    bars = ax.bar(top_10.index, top_10.values, color='blue') 
+    ax.bar_label(bars, fontsize=10, padding=0, color='red') 
+    ax.set_title(f'Top 10 Countries in {year}', fontsize=16, loc='right', y=0.8, x=0.9) 
+    ax.set_ylabel('Number of Customers')  
+    ax.set_xlabel('Country', fontsize=9) 
+    ax.set_xticks(top_10.index) 
+    ax.set_xticklabels(top_10.index, rotation=80) 
+
+fig, axes = plt.subplots(1, 3, figsize=(15, 5), sharey=True)
+
+for i, year in enumerate([2009, 2010, 2011]):
+        plot_top_10(group_pivot, year, axes[i])
+```
+
+3. Define how the number of clients has changed over the 2009 - 2011. Add the values of Absolute Growth to the pivot table. 
+We do not use the Normalized Absolute Growth or % -comparing because there are big differences in numbers which give us not relevant results
+
+```python
+# Calculate the Absolute Growth of unique Customers between 2011 and 2009.
+group_pivot['Absolute_Growth'] = group_pivot[2011] - group_pivot[2009]
+
+# Extract data frame with the Top 10 countries by the absolute growth of customers
+growth_top10 = growth.sort_values(by='Absolute_Growth', ascending=False).head(10)
+```
+
+[File for Python code](https://github.com/PeleshkoV/Team_Project_Online_Retail/blob/main/src/Customer%20Metric/Part%201_BS2_Valuable_Customer.ipynb)
+
+#### Part 2
+Predicting the most valuable customers in upcoming years to increase efficiency. 
+
+For the exploration of customer behavior, we use RFM analysis.
+
+1. Create the new features for our data frame: Total Spend, Recency, Frequency.
+
+```python
+#Calculate the total amount of money that the customers spent during each interaction.
+#Created a new feature in the column 'TotalSpend'. 
+    df['TotalSpend'] = df['Quantity'] * df['Price']
+
+#Group by both 'Customer ID' and 'Country'. Use an RFM analysis to calculate Recency, Frequency and Monetary for each client.
+rfm_df = df.groupby(['Customer ID','Country']).agg({
+    'InvoiceDate': lambda x: (df['InvoiceDate'].max() - x.max()).days,  
+    'Invoice': 'nunique',  
+    'TotalSpend': 'sum' 
+    }).reset_index()    
+```
+
+2. Visualize the distribution of numerical data from the rfm_df using the boxplots function and interquartile range (IQR) method. Find and remove outliers.
+
+```python
+# Boxplot to identify outliers
+for i in rfm_df.select_dtypes(include="number").columns:
+        sns.boxplot(data=rfm_df, x=i)
+        plt.show()
+
+# Calculate the Interquartile Range and identify the values that fall below the boundaries
+Q1 = rfm_df['Quantity'].quantile(0.25)
+Q3 = rfm_df['Quantity'].quantile(0.75)
+IQR = Q3 - Q1
+
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+
+outliers_iqr = df[(df['Quantity'] < lower_bound) | (df['Quantity'] > upper_bound)]
+```
+
+3. Choose a Machine Learning Model for prediction.   
+Proceed with a Linear Regression with a Standard Scaler.  
+Features for the model: Recency and Frequency. Target variable: Monetary value 
+
+```python
+# Initialize the StandardScaler
+scaler = StandardScaler()
+
+# Select the features that need to be scaled
+features_to_scale = ['Recency', 'Frequency', 'Monetary']
+
+# Fit and transform the selected features
+rfm_df_scaled = rfm_df.copy()  
+rfm_df_scaled[features_to_scale] = scaler.fit_transform(rfm_df[features_to_scale])
+```
+
+4. Fit, train and test LinearRegression model. Make predictions.
+
+```python
+# Sort by predicted monetary value to identify the most valuable customers
+most_valuable_customers = rfm_df_scaled.sort_values(by='Predicted_Monetary', ascending=False)
+```
+
+[File for Python code](https://github.com/PeleshkoV/Team_Project_Online_Retail/blob/main/src/Customer%20Metric/BS2_Valuable_Customer.ipynb)
 
 ## Summary of Findings
 
@@ -261,6 +392,76 @@ This intersection point illustrates the divergence in growth dynamics between a 
 
 ### Findings Customer Metric
 ### How many unique customers per country in the last years? - Viktoriia & Liya
+
+During 2009 - 2011 the Company significantly developed the business. The total number of Customers increased by 4 times.
+
+![All_Customers](Total_output.png)
+
+2009: The base for growth  
+The number of customers was at its lowest level during the analyzed period, reaching only 1045 clients. This may indicate the initial stage of business development or other factors that affected the low customer base in that year.
+
+2010: Business Expansion  
+There was a significant growth by 4 times in the number of customers to 4290 clients. This indicates successful marketing campaigns, improved service quality, or other positive changes in the company's operations.
+
+2011: Stability  
+The number of customers remained at a high level and reached 4246 clients. A slight decline compared to 2010 may be due to seasonal fluctuations, market changes, or other external factors.
+
+Next, explore what Countries had the largest Customer base and made the biggest impact on the business. 
+
+#### Top 10 markets: domestic customers are a priority
+
+The Company is present in 39 countries worldwide.
+The analysis shows the widest markets for all 3 years were the UK, Germany, France, and Spain. 
+
+![Top_Customers](Top_10_years.png)
+
+In 2009-2011, the United Kingdom had an overwhelmingly larger number of customers compared to other countries. This is a native, well-known market for the Company.   
+Germany, France, and Spain appear in the Top 10 across all years but with much lower customer counts compared to the UK. The number of clients for these countries remains under 100 each year.  
+Countries like Belgium, Australia, and Austria have minimal representation, typically fewer than 30 customers annually.
+
+Outside of the Top 10, there are some non-European countries with a small number of customers. Examples: Bahrain (2), Brazil (1), Canada (4), RSA (1), Singapore (1), United Arab Emirates (2) etc. It seems that the company's strategy doesn't include expansion into American, Asian or African markets in the near future. The appearance of several clients there is more likely an accident or a trial.
+
+#### Growing European markets 
+
+The analysis of Absolute Growth confirms the trend: the strategy of the Company in 2009-2011 was rapid expansion in the UK market and slight development in some other European countries. 
+
+![Dominant UK](UK_Total.png)
+
+Absolute Growth leader - United Kingdom. The number of UK clients increased by 2849 names in 2011 compared with 2009 – 4 times! In 2009, UK clients accounted for 94.4% of the whole company's customer base. It declined to 92% in 2010 and 90.3% in 2011. The main reason for this slight decrease is the expansion into other European countries.
+
+![Absolure Growth](Growth_rate.png)
+
+The client’s bases significantly increased in Germany (+82 customers) and in France (+71) but their sizes remain small. 
+3 more countries added 20+ customers for the observation period: Spain, Belgium, and  Switzerland.
+
+Opportunities for Growth  
+The Company is not making enough efforts to develop new markets, although it already has a global market structure.  
+The Company may increase its expansion into European markets while continuing to develop new products and offerings for the local UK market. For this goal, the Company should focus on deeper market analysis to understand regional customer preferences and identify high-potential segments in Europe.
+
+#### Insights about Customers 
+
+In the next part of the exploration, we try to understand customer behavior.  
+For the analysis, used the RFM method that is common in marketing. It helps businesses categorize customers into segments, enabling targeted and personalized marketing strategies (Learn more https://www.optimove.com/resources/learning-center/rfm-segmentation)   
+This analysis is based on three key factors:  
+- Recency is the amount of days since the customer's last purchase.
+- Frequency is the total number of purchases made by the customer.
+- Monetary is the Sum of the customer's total spend (during a defined period). 
+
+These new features were calculated and distributed. We received detailed information with useful insights about each of Customers. 
+
+![Customer_range](RFM_Customers.png)
+
+Why is it important? 
+RFM analysis can help businesses focus on retaining and growing relationships with customers who contribute the most to their profitability.
+
+Based on the data we received, were created Linear Regression for the prediction of the most valuable customers in upcoming years to increase efficiency.
+
+![Valuable_Customers](<Valuable Customers.png>)
+
+These customers may spend more amount in the future, hence considering them as the most valuable clients. All of them are located in the UK which underlines the importance of this market for the Сompany. 
+
+Take care of valuable Customers  
+Focus on retaining and nurturing the most valuable Customers by offering personalized rewards / promotions and exclusive deals to maximize their lifetime value and re-engage inactive customers with special offers to increase their spending.
 
 ## Video Links
 
