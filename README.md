@@ -465,13 +465,13 @@ Focus on retaining and nurturing the most valuable Customers by offering persona
 
 ## Video Links
 
-* [Carlos Gonzalez-Dao](https://github.com/CarlosGD-CAN/Team_Project_Online_Retail/tree/main/document)
-* [Liya Paul](https://github.com/CarlosGD-CAN/Team_Project_Online_Retail/tree/main/document)
-* [Nicole Yu](https://github.com/CarlosGD-CAN/Team_Project_Online_Retail/tree/main/document)
-* [Viktoriia Peleshko](https://github.com/CarlosGD-CAN/Team_Project_Online_Retail/tree/main/document) 
+* [Carlos Gonzalez-Dao](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/document)
+* [Liya Paul](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/document)
+* [Nicole Yu](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/document)
+* [Viktoriia Peleshko](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/document)
 
 ## Reference
 
 [Data Folder](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/data)
-[Presentation and videos](https://github.com/CarlosGD-CAN/Team_Project_Online_Retail/tree/main/document)
-[Code](https://github.com/CarlosGD-CAN/Team_Project_Online_Retail/tree/main/src)
+[Presentation and videos](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/document)
+[Code](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/src)
