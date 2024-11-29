@@ -473,5 +473,7 @@ Focus on retaining and nurturing the most valuable Customers by offering persona
 ## Reference
 
 [Data Folder](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/data)
+
 [Presentation and videos](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/document)
+
 [Code](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/src)
