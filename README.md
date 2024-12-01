@@ -14,7 +14,7 @@ The project aims to gain insights into the factors affecting global retail sales
 
 * Carlos Gonzalez-Dao [CarlosGD-CAN](https://github.com/CarlosGD-CAN/Team_Project_Online_Retail)
 * Liya Paul [liyapaul24](https://github.com/liyapaul24/Team_Project_Online_Retail)
-* Nicole Yu [nicolexyu](https://github.com/nicolexyu/Team_Project_Online_Retail)
+* Nicole Xiaoye Yu [nicolexyu](https://github.com/nicolexyu/Team_Project_Online_Retail)
 * Viktoriia Peleshko [PeleshkoV](https://github.com/PeleshkoV/Team_Project_Online_Retail)
 
 ## Table of Contents
@@ -467,7 +467,7 @@ Focus on retaining and nurturing the most valuable Customers by offering persona
 
 * [Carlos Gonzalez-Dao](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/document)
 * [Liya Paul](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/document)
-* [Nicole Yu](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/document)
+* [Nicole Xiaoye Yu](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/document)
 * [Viktoriia Peleshko](https://github.com/nicolexyu/Team_Project_Online_Retail/tree/main/document)
 
 ## Reference
